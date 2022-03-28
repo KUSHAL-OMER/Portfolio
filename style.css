@@ -1,0 +1,684 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
+html[data-theme="light"] {
+    --back: #85F4FF;
+    --cont:#B8FFF9;
+    --headline:#EFFFFD;
+    --shadow: #42C2FF;
+    --inlin: black;
+}
+html[data-theme="dark"] {
+    --back: #062C30;
+    --cont:#05595B;
+    --headline:#E2D784;
+    --shadow: #42C2FF;
+    --inlin: #F5F5F5;
+}
+button {
+    font-size: large;
+}
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Quicksand', sans-serif;
+}
+h1 {
+    color: var(--inlin);
+    text-decoration: underline;
+    text-decoration-style: wavy;
+    padding-bottom: 3%;
+}
+body {
+    background: var(--back);
+}
+#about {
+    display: flex;
+    flex-direction: column;
+    padding: 2%;
+    align-items: center;
+}
+#knowmore {
+    color: var(--inlin);
+    margin-top: 2%;
+    padding: 1%;
+    animation: bounce 1s linear .1s infinite alternate-reverse;
+    background:none;
+    transition-property: all;
+    transition-delay: 0ms;
+    transition-duration: .5s;
+    transition-timing-function: linear;
+}
+#knowmore:hover {
+    color: black;
+    background: var(--headline);
+    box-shadow: 2px 2px 5px var(--shadow);
+}
+@keyframes bounce {
+    0% {
+        transform: rotate(5deg);
+    }
+    100% {
+        transform: rotate(-5deg);
+    }
+}
+#about p {
+    color: var(--inlin);
+    width: 80%;
+    background: var(--cont);
+    border-inline: 1px solid var(--inlin);
+    padding: 5%;
+    animation: open .2s linear 0s 1 normal;
+}
+@keyframes open {
+    from {
+        width: 0;
+    }
+    to {
+        width: 80%;
+    }
+}
+#education {
+    display: none;
+    padding: 2%;
+    flex-direction: column;
+}
+.card {
+    border: 1px solid var(--inlin);
+}
+.card header {
+    padding:2%;
+    background: var(--headline);
+}
+.auction2 {
+    background: var(--cont);
+    padding: 2%;
+    display: none;
+    /* text-align: center; */
+}
+@keyframes show {
+    from {
+        transform: scale(0.2);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+.auction1 {
+    background: var(--cont);
+    padding: 2%;
+    display: block;
+    /* text-align: center; */
+}
+.auction2 p,
+.auction2 h4,
+.auction1 p,
+.auction1 h4 {
+    color: var(--inlin);
+    animation: show .5s linear 0s 1 normal;
+}
+#ab_pre {
+    color: var(--inlin);
+    padding: 1%;
+    background:none;
+    transition-property: all;
+    transition-delay: 0ms;
+    transition-duration: .5s;
+    transition-timing-function: linear;
+}
+#ab_pre:hover {
+    color: black;
+    background: var(--headline);
+    box-shadow: 2px 2px 5px var(--shadow);
+}
+#experience {
+    color: var(--inlin);
+    padding: 1%;
+    background:none;
+    transition-property: all;
+    transition-delay: 0ms;
+    transition-duration: .5s;
+    transition-timing-function: linear;
+}
+#experience:hover {
+    color: black;
+    background: var(--headline);
+    box-shadow: 2px 2px 5px var(--shadow);
+}
+#project {
+    flex-direction: column;
+    padding: 0 0 0 10%;
+    display: none;
+}
+#project header {
+    text-align: center;
+}
+.carosal {
+    display: flex;
+}
+.box2,.box3,.box4 {
+    display: none;
+}
+.box1 {
+    display: block;
+}
+#forward {
+    background:var(--cont);
+    padding: 5%;
+    border: none;
+}
+#reverse {
+    background:var(--cont);
+    padding: 5%;
+    border: none;
+}
+img {
+    transition-property: all;
+    transition-delay: 0s;
+    transition-duration: .2s;
+    transition-timing-function: linear;
+    animation: show .5s linear 0s 1 normal;
+}
+img:hover {
+    filter:contrast(.1);
+    transform: skewY(5deg);
+}
+.info {
+    padding: 2%;
+    display: none;
+    width: 750px;
+    flex-direction: column;
+    color: var(--headline);
+    position: absolute;
+    bottom: 50%;
+}
+.info2 {
+    padding: 2%;
+    display: none;
+    width: 750px;
+    flex-direction: column;
+    color: var(--headline);
+    position: absolute;
+    bottom: 50%;
+}
+#ed_pre {
+    color: var(--inlin);
+    padding: 1%;
+    background: none;
+    transition-property: all;
+    transition-delay: 0ms;
+    transition-duration: .5s;
+    transition-timing-function: linear;
+}
+#ed_pre:hover {
+    color: black;
+    background: var(--headline);
+    box-shadow: 2px 2px 5px var(--shadow);
+}
+#contact {
+    color: var(--inlin);
+    padding: 1%;
+    background: none;
+    transition-property: all;
+    transition-delay: 0ms;
+    transition-duration: .5s;
+    transition-timing-function: linear;
+}
+#contact:hover {
+    color: black;
+    background: var(--headline);
+    box-shadow: 2px 2px 5px var(--shadow);
+}
+.proj {
+    padding: 1%;
+    display: flex;
+    gap: 1%;
+    justify-content: center;
+}
+#reverse {
+    font-size: larger;
+}
+#forward {
+    font-size: larger;
+}
+#con {
+    padding: 5%;
+    display: none;
+    flex-direction: column;
+}
+#con header {
+    text-align: center;
+    padding-bottom: 3%;
+}
+.con_info {
+    border-inline: 1px solid var(--inlin);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    background: var(--cont);
+}
+.con_info>p {
+    font-size: xx-large;
+    color: var(--inlin);
+}
+.con_info>p span::before {
+    content: "";
+    animation: type 5s ease 1s infinite normal;
+}
+@keyframes type {
+    0% {
+        content: "";
+    }
+    10% {
+        content: "Thankyou";
+    }
+    20% {
+        content: "Thankyou for";
+    }
+    30% {
+        content: "Thankyou for visit!";
+    }
+    40% {
+        content: "Thankyou for";
+    }
+    50% {
+        content: "Thankyou";
+    }
+    60% {
+        content: "";
+    }
+    70% {
+        content: "Hope";
+    }
+    80% {
+        content: "Hope you";
+    }
+    85% {
+        content: "Hope you enjoyed!";
+    }
+    90% {
+        content: "Hope you";
+    }
+    100% {
+        content: "Hope";
+    }
+}
+.links {
+    font-size: larger;
+    display: flex;
+    flex-direction: column;
+}
+#back {
+    color: var(--inlin);
+    padding: 1%;
+    background: none;
+    transition-property: all;
+    transition-delay: 0ms;
+    transition-duration: .5s;
+    transition-timing-function: linear;
+}
+#back:hover {
+    color: black;
+    background: var(--headline);
+    box-shadow: 2px 2px 5px var(--shadow);
+}
+@media (max-width:1100px) {
+    * {
+        padding: 0;
+    }
+    img {
+        width: 100%;
+        transition: none;
+    }
+    img:hover {
+        filter: none;
+        transform: none;
+    }
+    .info {
+        width: 70%;
+        bottom: 40%;
+    }
+    .info2 {
+        width: 70%;
+        bottom: 40%;
+    }
+    #project {
+        padding: 0;
+    }
+    .links {
+        font-size: small;
+        display: flex;
+        flex-direction: column;
+    }
+}
+a {
+    color: var(--inlin);
+    text-decoration: none;
+}
+/* The switch - the box around the slider */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 25px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+/* The slider */
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 20px;
+    width: 20px;
+    left: 2px;
+    bottom: 3px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+input:checked+.slider {
+    background-color: #2196F3;
+}
+
+input:focus+.slider {
+    box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked+.slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+.tog {
+    color: var(--inlin);
+    gap: 1%;
+    padding: 0.5% 0 0 2%;
+    display: flex;
+    align-items: center;
+}
+#skill {
+    display: none;
+}
+#skl {
+    color: var(--inlin);
+    padding: 1%;
+    background: none;
+    transition-property: all;
+    transition-delay: 0ms;
+    transition-duration: .5s;
+    transition-timing-function: linear;
+}
+#skl:hover {
+    color: black;
+    background: var(--headline);
+    box-shadow: 2px 2px 5px var(--shadow);
+}
+#sk_pre {
+    color: var(--inlin);
+    padding: 1%;
+    background: none;
+    transition-property: all;
+    transition-delay: 0ms;
+    transition-duration: .5s;
+    transition-timing-function: linear;
+}
+#sk_pre:hover {
+    color: black;
+    background: var(--headline);
+    box-shadow: 2px 2px 5px var(--shadow);
+}
+#skill {
+    flex-direction: column;
+    padding: 2%;
+}
+.buton {
+    padding: 2%;
+    display: flex;
+    gap: 1%;
+    justify-content: center;
+}
+.talent {
+    display: flex;
+    gap: 30px;
+    flex-direction: column;
+}
+.java, .c, .htm, .react, .mongo, .node, .angular, .css, .javs {
+    display: flex;
+    justify-content: center;
+    gap: 1%;
+}
+.outter {
+    padding: 0.5%;
+    display: flex;
+    align-items: center;
+    width:60%;
+    /* height: 10px; */
+    border: 1px solid var(--inlin);
+}
+.name {
+    color: var(--inlin);
+}
+.inner {
+    background-color: var(--inlin)
+}
+.java .inner {
+    height: 10px;
+    width: 90%;
+    animation: wid1 4s ease 0.1s 1 normal;
+}
+@keyframes wid1 {
+    0% {
+        width: 0;
+    }
+    25% {
+        width: 90%;
+    }
+    50% {
+        width:85%
+    }
+    100% {
+        width: 90%;
+    }
+}
+.c .inner {
+    height: 10px;
+    width: 70%;
+    animation: wid2 4s ease 0.1s 1 normal;
+}
+@keyframes wid2 {
+    0% {
+        width: 0;
+    }
+
+    25% {
+        width: 70%;
+    }
+
+    50% {
+        width: 65%
+    }
+
+    100% {
+        width: 70%;
+    }
+}
+.htm .inner {
+    height: 10px;
+    width: 80%;
+    animation: wid3 4s ease 0.1s 1 normal;
+}
+@keyframes wid3 {
+    0% {
+        width: 0;
+    }
+
+    25% {
+        width: 80%;
+    }
+
+    50% {
+        width: 75%
+    }
+
+    100% {
+        width: 80%;
+    }
+}
+.react .inner {
+    height: 10px;
+    width: 75%;
+    animation: wid4 4s ease 0.1s 1 normal;
+}
+@keyframes wid4 {
+    0% {
+        width: 0;
+    }
+
+    25% {
+        width: 75%;
+    }
+
+    50% {
+        width: 70%
+    }
+
+    100% {
+        width: 75%;
+    }
+}
+.mongo .inner {
+    height: 10px;
+    width: 65%;
+    animation: wid5 4s ease 0.1s 1 normal;
+}
+@keyframes wid5 {
+    0% {
+        width: 0;
+    }
+
+    25% {
+        width: 65%;
+    }
+
+    50% {
+        width: 60%
+    }
+
+    100% {
+        width: 65%;
+    }
+}
+.node .inner {
+    height: 10px;
+    width: 70%;
+    animation: wid6 4s ease 0.1s 1 normal;
+}
+@keyframes wid6 {
+    0% {
+        width: 0;
+    }
+
+    25% {
+        width: 70%;
+    }
+
+    50% {
+        width: 65%
+    }
+
+    100% {
+        width: 70%;
+    }
+}
+.angular .inner {
+    height: 10px;
+    width: 75%;
+    animation: wid7 4s ease 0.1s 1 normal;
+}
+@keyframes wid7 {
+    0% {
+        width: 0;
+    }
+
+    25% {
+        width: 75%;
+    }
+
+    50% {
+        width: 70%
+    }
+
+    100% {
+        width: 75%;
+    }
+}
+.css .inner {
+    height: 10px;
+    width: 80%;
+    animation: wid8 4s ease 0.1s 1 normal;
+}
+@keyframes wid8 {
+    0% {
+        width: 0;
+    }
+
+    25% {
+        width: 80%;
+    }
+
+    50% {
+        width: 75%
+    }
+
+    100% {
+        width: 80%;
+    }
+}
+.javs .inner {
+    height: 10px;
+    width: 80%;
+    animation: wid9 4s ease 0.1s 1 normal;
+}
+@keyframes wid9 {
+    0% {
+        width: 0;
+    }
+
+    25% {
+        width: 80%;
+    }
+
+    50% {
+        width: 75%
+    }
+
+    100% {
+        width: 80%;
+    }
+}
