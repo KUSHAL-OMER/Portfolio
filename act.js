@@ -44,16 +44,16 @@ document.getElementById("experience").addEventListener('click', () => {
 let c=1;
 document.getElementById("forward").addEventListener('click',() => {
     document.querySelector(".box"+String(c)).style.display="none";
-    if(c+1>2)
+    if(c+1>3)
     c=0;
-    c+=1
+    c+=1;
     document.querySelector(".box"+String(c)).style.display="block";
 });
 document.getElementById("reverse").addEventListener('click', () => {
     document.querySelector(".box" + String(c)).style.display = "none";
     if (c - 1 <1)
-        c = 3;
-    c -= 1
+        c = 4;
+    c -= 1;
     document.querySelector(".box" + String(c)).style.display = "block";
 });
 document.querySelector(".img1").addEventListener('mouseenter',() => {
@@ -107,4 +107,11 @@ document.getElementById("sk_pre").addEventListener('click', () => {
     pr.style.display = "none";
     let sk = document.getElementById("skill");
     sk.style.display = "flex";
+});
+document.querySelector(".img3").addEventListener('mouseenter', () => {
+    if (window.innerWidth > 1100)
+        document.querySelector(".info3").style.display = "flex";
+});
+document.querySelector(".img3").addEventListener('mouseleave', () => {
+    document.querySelector(".info3").style.display = "none";
 });
